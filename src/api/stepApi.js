@@ -16,22 +16,29 @@ export const getSteps = () => {
 const getMostRecentContent = (data) => {
   let mostRecentContentArr = [];
   data.forEach((step) => {
-    let mostRecentContent;
+    let mostRecentContent = '';
     step.versionContent.forEach((content) => {
-      if (mostRecentContent === undefined) {
-        mostRecentContent = {title: content.title, body: content.body};
+      if (mostRecentContent === '') {
+        mostRecentContent = { title: content.title, body: content.body, effectiveDate: content.effectiveDate};
       } else if (
-        Date.parse(mostRecentContent.effectiveDate) < Date.parse(content.effectiveDate)
+        Date.parse(mostRecentContent.effectiveDate) <
+        Date.parse(content.effectiveDate)
       ) {
-        mostRecentContent = {title: content.title, body: content.body};
+        mostRecentContent = { title: content.title, body: content.body, effectiveDate: content.effectiveDate };
       }
     });
-    mostRecentContentArr.push({id: step.id, stepNumber: step.stepNumber, ...mostRecentContent})
+
+    mostRecentContentArr.push({
+      id: step.id,
+      stepNumber: step.stepNumber,
+      title: mostRecentContent.title,
+      body: mostRecentContent.body,
+    });
   });
   return mostRecentContentArr;
 };
 
 // sort steps by stepNumber
 const sortSteps = (data) => {
-  return data.sort((a, b) => (+a.stepNumber > +b.stepNumber) ? 1 : -1)
+  return data.sort((a, b) => (+a.stepNumber > +b.stepNumber ? 1 : -1));
 };
