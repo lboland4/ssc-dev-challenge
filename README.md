@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # ssc-dev-challenge
-=======
+
 # README
 
 Created for SingleStone Front-End Dev Challenge
