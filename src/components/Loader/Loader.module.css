@@ -1,0 +1,28 @@
+.LoaderContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid blue;
+  border-top: 3px solid white;
+  animation: rotateLoader 2000ms linear infinite forwards;
+}
+
+@keyframes rotateLoader {
+  0% {
+    transform: rotateZ(0)
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(720deg);
+  }
+}

@@ -1,0 +1,75 @@
+.Hero {
+  width: 100%;
+  height: 66vh;
+  position: relative;
+}
+
+.Hero img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  z-index: 1;
+}
+
+.HeroContentFlex {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  bottom: 10%;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  color: white;
+}
+
+.Subtitle {
+  font-size: 22px;
+  font-family: 'Lato';
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.Title {
+  font-size: 40px;
+  font-family: 'Lato';
+  font-weight: 300;
+  margin: 0;
+}
+
+.ParagraphContent {
+  font-size: 16px;
+  font-family: 'Lato';
+  max-width: 350px;
+  width: 40%;
+}
+@media (max-width: 768px) {
+  .Subtitle {
+    font-size: 18px;
+  }
+  .Title {
+    font-size: 32px;
+  }
+  .ParagraphContent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .HeroContentFlex {
+    top: 50%; 
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, -20%);
+    margin: 0;
+    align-items: center;
+  }
+
+  .Title, .Subtitle, .ParagraphContent {
+    text-align: center;
+    width: 90%;
+  }
+}

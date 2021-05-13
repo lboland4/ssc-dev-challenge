@@ -1,0 +1,38 @@
+.StepGroup {
+  width: 100%;
+  background-color: rgba(242, 241, 239, 1.0);
+  padding-top: 1rem;
+}
+
+.StepGroupHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 28px;
+  font-family: 'Lato';
+  margin: 1rem 0;
+}
+
+.StepGroupFlex {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 200px;
+}
+
+@media (max-width: 768px) {
+  .StepGroupFlex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .StepGroupFlex {
+    width: 50%;
+    grid-template-columns: 1fr;
+  }
+}
