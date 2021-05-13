@@ -9,12 +9,12 @@
   color: #000;
   text-transform: uppercase;
   background-color: rgba(71, 228 ,194, 1.0);
-  transition: all 1s ease-out;
+  transition: all 200ms ease-out;
 }
 
 .Button:hover {
-  background-color: rgb(0, 255, 200);
-  transform: scale(1.025);
+  background-color: rgb(212, 233, 226);
+  transform: scale(1.05);
 }
 
 .Button:active {
