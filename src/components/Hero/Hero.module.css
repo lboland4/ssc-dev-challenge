@@ -16,7 +16,6 @@
 
 .HeroContentFlex {
   position: absolute;
-  width: 100%;
   max-width: 1200px;
   bottom: 10%;
   margin: 0 15%;
@@ -41,7 +40,6 @@
 .ParagraphContent {
   font-size: 16px;
   max-width: 350px;
-  width: 40%;
 }
 @media (max-width: 768px) {
   .Subtitle {
@@ -57,6 +55,7 @@
 
 @media (max-width: 500px) {
   .HeroContentFlex {
+    width: 100%;
     top: 50%; 
     left: 50%;
     bottom: auto;
