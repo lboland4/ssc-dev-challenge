@@ -11,6 +11,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const stepGroupRef = useRef(null);
 
+  // scrolling to How It Works section. Would've usually used a library to help with this.
+  // But I can always use practice doing something on my own :)
   const scroll = () => stepGroupRef.current.scrollIntoView({behavior: 'smooth'});
 
   return (

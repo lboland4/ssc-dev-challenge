@@ -7,7 +7,7 @@ Created for SingleStone Front-End Dev Challenge
 I used create-react-app to bootstrap this project.
 No additional libraries other than those included in create-react-app were used to create this web app.
 
-Note: There aren't 2 contributors, like GitHub would like you to believe. I had trouble completely switching github credentials from an old account over to this one. Oops!!
+Note: There aren't 2 contributors like GitHub would lead you to believe. I didn't switch github credentials from an old account over to this one. Oops!!
 
 To run:
 ### `npm install`

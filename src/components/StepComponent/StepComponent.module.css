@@ -7,7 +7,6 @@
 
 .StepNumber {
   font-size: 44px;
-  font-family: 'Lato';
   font-weight: 400;
   border-bottom: 3px solid rgba(71, 228 ,194, 1.0);
   padding-bottom: 0.5rem;
@@ -15,7 +14,6 @@
 
 .StepTitle {
   text-align: center;
-  font-family: 'Lato';
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
@@ -25,7 +23,6 @@
 
 .StepBody {
   text-align: center;
-  font-family: 'Lato';
   font-size: 14px;
   font-weight: 300;
   margin-top: 0.7rem;

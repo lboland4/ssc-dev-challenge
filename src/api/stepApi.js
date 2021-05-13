@@ -1,5 +1,5 @@
 // function called to return the steps from the api endpoint.
-// getMostRecentContent and sortSteps are called on the data before returning the data in the expected format and order
+// getMostRecentContent and sortSteps are called on the data before returning the steps to create the expected format and order for UI.
 export const getSteps = () => {
   const baseUrl =
     'https://uqnzta2geb.execute-api.us-east-1.amazonaws.com/default/FrontEndCodeChallenge';

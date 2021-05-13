@@ -10,8 +10,8 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 3px solid blue;
-  border-top: 3px solid white;
+  border: 3px solid rgb(0,0,255);
+  border-top: 3px solid #fff;
   animation: rotateLoader 2000ms linear infinite forwards;
 }
 

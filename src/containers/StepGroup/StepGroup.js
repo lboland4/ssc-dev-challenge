@@ -8,15 +8,13 @@ const StepGroup = (props) => {
   const [stepData, setStepData] = useState('');
   const { loading, setLoading } = props;
 
+  // Get the steps from the api here and set state to the response
   useEffect(() => {
     setLoading(true);
     getSteps().then(
       (data) => {
         setStepData(data);
         setLoading(false);
-      },
-      (reject) => {
-        console.log(reject);
       }
     );
   }, [setLoading]);
