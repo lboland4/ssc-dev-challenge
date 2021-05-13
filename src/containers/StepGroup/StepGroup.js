@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from 'react';
+
+import { getSteps } from '../../api/stepApi';
+import classes from './StepGroup.module.css';
+import StepComponent from '../../components/StepComponent/StepComponent';
+
+const StepGroup = (props) => {
+  const [stepData, setStepData] = useState('');
+  const { loading, setLoading } = props;
+
+  useEffect(() => {
+    setLoading(true);
+    getSteps().then(
+      (data) => {
+        setStepData(data);
+        setLoading(false);
+      },
+      (reject) => {
+        console.log(reject);
+      }
+    );
+  }, [setLoading]);
+
+  return (
+    <React.Fragment>
+      {loading ? (
+       null
+      ) : (
+        <section ref={props.stepGroupRef} className={classes.StepGroup}>
+          <h3 className={classes.StepGroupHeader}>How It Works</h3>
+          <div className={classes.StepGroupFlex}>
+            {stepData.map((step) => {
+              return <StepComponent key={step.id} {...step}/>;
+            })}
+          </div>
+        </section>
+      )}
+    </React.Fragment>
+  );
+};
+
+export default StepGroup;
