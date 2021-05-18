@@ -5,7 +5,7 @@ import classes from './StepGroup.module.css';
 import StepComponent from '../../components/StepComponent/StepComponent';
 
 const StepGroup = (props) => {
-  const [stepData, setStepData] = useState('');
+  const [stepData, setStepData] = useState([]);
   const { loading, setLoading } = props;
 
   // Get the steps from the api here and set state to the response
